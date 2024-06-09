@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Content Update3
+  m_EditorClassIdentifier: 
+  m_GroupName: Content Update3
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 29f417492f74b5f4d82030605cdf8d62
+  m_SerializeEntries:
+  - m_GUID: 097a2c3382f95564a9f13e67b3e510dd
+    m_Address: Assets/Sources/Material/LineRendererMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02d4a1f69371cfc47a50e017b7d63017
+    m_Address: Assets/Sources/Material/GlowLit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2a7255f011495047a05eb59adabd49a
+    m_Address: Assets/Sources/Sprites/DownSprites/Map/Material/MT Village Props -
+      Default.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e97984d25443bab4a813702c3e3e82a1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3a7116bd59f4c4f409237cd84b7d818c, type: 2}
+    - {fileID: 11400000, guid: ff53b7159916cb9448ded20e175454a2, type: 2}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c56e0ba93fc6bc4aa718fb9b8d8779f, type: 3}
+  m_Name: T1-Helmet
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 67eaf2a7d1686074684270d1821c55cb, type: 3}
+  <IsStackable>k__BackingField: 0
+  <Maxquantity>k__BackingField: 1
+  <Name>k__BackingField: ScoutHelmet
+  <Type>k__BackingField: 0
+  <Description>k__BackingField: Cheap Helmet
+  <BuyCost>k__BackingField: 3000
+  <SellCost>k__BackingField: 1500
+  effects:
+  - {fileID: 11400000, guid: 7551b3d8d1fb4684b84da46cb7eaddf9, type: 2}
+  ingredient: []

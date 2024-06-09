@@ -1,0 +1,679 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Content Update1
+  m_EditorClassIdentifier: 
+  m_GroupName: Content Update1
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 2eb2b27695e3bc64ebd31387b21f07cf
+  m_SerializeEntries:
+  - m_GUID: 9c68dc05c4efb82468f5be3496ad9665
+    m_Address: Assets/FantasyIconsPackFree/Atlases/Icons.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c65e285e2bfa766428d07aef51d7757d
+    m_Address: Assets/FantasyIconsPackFree/Icons/Boots/Scout.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c6de69acca756c409be4810a8510ac5
+    m_Address: Assets/FantasyIconsPackFree/Icons/Shield/WoodenShield.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c00ea4006710ea4994e82ed1d0387ac
+    m_Address: Assets/FantasyIconsPackFree/Icons/Arrow/BattleBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67eaf2a7d1686074684270d1821c55cb
+    m_Address: Assets/FantasyIconsPackFree/Icons/Helmet/ScoutHelm.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d143ed4028bd9c94bb194e2b91f870dd
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeK.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51d0cbd98e5243c4eac6f1e283a558c2
+    m_Address: Assets/FantasyIconsPackFree/Icons/Bow/MarauderBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17790c504822a7041b2cb232729c9b19
+    m_Address: Assets/FantasyIconsPackFree/Icons/Armor/Scout.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abcc37f251b41234c8fa005f9e6027e6
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeG.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f84b6dd0347a94f4a9a69ac911fc1f9d
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/SilverRing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7a8708dc5bcaf14ebd3978a42a6ea65
+    m_Address: Assets/FantasyIconsPackFree/Icons/Helmet/HawkHelm.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee0ed61959fdb2a4fa6a6294228f5f47
+    m_Address: Assets/FantasyIconsPackFree/Icons/Helmet/HighKnightHelm.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a017b2adacca0544b00f7cd9fc8b0be
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeV.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f17b16f02b2246499ac554b97a16d4a
+    m_Address: Assets/FantasyIconsPackFree/Icons/Other/Misc/ChickenLeg.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26c38558ab447c84a90b4d7d5af48c53
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeR.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ceb0a22206fea046be70ad00381bf62
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/BerserkAxe.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7d19ec039fa7b141bd165aa95496c75
+    m_Address: Assets/FantasyIconsPackFree/Icons/Other/Misc/SmallPotion.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cee802c4711b2cc4c9be089c2d913ba9
+    m_Address: Assets/FantasyIconsPackFree/Icons/Shield/MilitiamanShield.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4097dec1e9a0ede4c85bf4caa28e9bcf
+    m_Address: Assets/FantasyIconsPackFree/Icons/Shield/WoodenShield2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 131ae7d5c3bf62f4ca9d47f57e1ef952
+    m_Address: Assets/FantasyIconsPackFree/Icons/Armor/GreyKnight.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5df4b9cfda870304c9e2decfcc0b094f
+    m_Address: Assets/FantasyIconsPackFree/Icons/Other/Misc/HandBomb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a59607811bc1f9459591856511467a5
+    m_Address: Assets/FantasyIconsPackFree/Icons/Boots/BanditLightArmor.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5ab6ea498c4d064781b7c052c6b6a2a
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/DarkSword.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b30a94500816be4da6e2aed83b9c757
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeC.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e41335ed24c5d4641b9e03ec7a6adcd0
+    m_Address: Assets/FantasyIconsPackFree/Icons/Other/Misc/Cheese.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8661c2c7e325a33438f06b02458fd199
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/GoldenRing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e67e11d800ebc144b9a0a05702c468e4
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/GateCrusher.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1debd018f9877c408ca2c35857bb8c2
+    m_Address: Assets/FantasyIconsPackFree/Icons/Shield/GladiatorShield.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74b95f8fcc76fcc4cb42a25e8d3cdbe0
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/LongHammer.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62b4a2f3dff4a9a4ba03a764d5fdd006
+    m_Address: Assets/FantasyIconsPackFree/Icons/Armor/DarkMountain.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb6df7dc5ceebe744a0ea02ca322493c
+    m_Address: Assets/FantasyIconsPackFree/Icons/Shield/SteelTowerShield.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0ea4b6e528e7fe4aa6cdc94d38691a1
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/AriostinGreatsword.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 032fd75b8a69dba47bfea3651c3418e2
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeL.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5105fe1d825990746b9a92407ea447ca
+    m_Address: Assets/FantasyIconsPackFree/Icons/Armor/BanditLightArmor.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c9bfd928f78cb541b9b79cfb995e5ae
+    m_Address: Assets/FantasyIconsPackFree/Icons/Shield/WoodenBuckler.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d359cffafe45e0e4c82527e85234799b
+    m_Address: Assets/FantasyIconsPackFree/Icons/Armor/ManticoreArmor.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bcb07d9c2c4c484caf61c33f48e3dd8
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/MagicSilverRing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60c1d42986dc0094c808b9e135f31ba2
+    m_Address: Assets/FantasyIconsPackFree/Icons/Other/Misc/Apple.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffc7798a0cb55fe43822bd8916e2ac60
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeU.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37665b2ddd98b1849afa610bb8214b9e
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/TwoHandedWoodenMace.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68377f5ef74af2a448279951a5a833b9
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/DestroyerAxe.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd414a9002c9cc743a6b1481e409997d
+    m_Address: Assets/FantasyIconsPackFree/Icons/Bow/RedwoodBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 701f8d3b6112e8d4c80ce90b73cd22d4
+    m_Address: Assets/FantasyIconsPackFree/Icons
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62a99ebf2f5cfe04da1d208b9e7817a9
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/MountainSword.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b4ac0b0be13bec4c9acb932adc265eb
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeA.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ae233fd4ed4cb44dbe9175df8aecc5d
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeN.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc19a06d6b21bcb41b8f9ae122727731
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeQ.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e76b30749d6bac4489c3ccf1ccb2c8fc
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/BronzeRing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2624c48670f92d649b04d03fe36abcd8
+    m_Address: Assets/FantasyIconsPackFree/Icons/Arrow/MarauderBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b78bff25601976046bab1d7a89182d64
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeO.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb1f2a59f67448f4db4f862dcb445aa9
+    m_Address: Assets/FantasyIconsPackFree/Icons/Arrow/WyvernHornBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c669fd80e2e35d4c8d3c0c3ab40ef55
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeD.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cfddf38e2d0fcbb40b169564fd58ea23
+    m_Address: Assets/FantasyIconsPackFree/Icons/Bow/WyvernHornBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c15e3998fb2b6e4691a7dfb3964c1ff
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeE.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c544836e2ceee34428d1abdac6b5ac59
+    m_Address: Assets/FantasyIconsPackFree/Icons/Boots/GreyKnight.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6b96b87adbd25343b9079d963ffb637
+    m_Address: Assets/FantasyIconsPackFree/Icons/Bow/VikingShortBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f1303cfff6593747a97f9c964728649
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/MagicBronzeRing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8f4e1ea22c66c7478593a19e0add994
+    m_Address: Assets/FantasyIconsPackFree/Icons/Arrow/HunterBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c03fbd6f990a8a54680cdd21777738e1
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/OldPoleaxe.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84d6a36e47e8f9042a960a8b033203a1
+    m_Address: Assets/FantasyIconsPackFree/Icons/Boots/DarkMountain.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c3a3a429ea992a4fa8604b16c540572
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeJ.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9505e419a14dda4ea399d26d5955f94
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/SteelAxe.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f6648c32a819be4a87ef3bad2807bad
+    m_Address: Assets/FantasyIconsPackFree/Icons/Boots/ManticoreArmor.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb71f977c061814419dd5a6a79a1a061
+    m_Address: Assets/FantasyIconsPackFree/Icons/Arrow/RedwoodBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb2acd264db5e24428dbf84cf8f0f467
+    m_Address: Assets/FantasyIconsPackFree/Icons/Bow/HunterBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 865ffc765fa708b49aef6dc9e46d7a50
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/ButcherKnife.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 285200a5b4134104782c7da0be17725e
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeM.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc6ec0b0f09e050458575e72975d27bb
+    m_Address: Assets/FantasyIconsPackFree/Icons/Arrow/VikingShortBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecb2fcfb829235547aef1b6aa27208d6
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeT.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c7f2b30efde63b4e85506baea6e3484
+    m_Address: Assets/FantasyIconsPackFree/Icons/Bow/BattleBow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af32ddb5caa8b2e4494cce9fe25edd3e
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeF.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbaa50961e3cd37468021eb65d631c9f
+    m_Address: Assets/FantasyIconsPackFree/Icons/Other/Misc/Grog.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5b0ffd461529e342ba71a15e7136cd8
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeB.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e29f293938fc0494d87d11a7532e32ea
+    m_Address: Assets/FantasyIconsPackFree/Icons/Armor/RoyalTunic.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc2fc20f0f4c1264aa897c67dfcc4553
+    m_Address: Assets/FantasyIconsPackFree/Icons/MeleeWeapon2H/Harpoon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28b103e16acf21b45afc90eb7afb7e42
+    m_Address: Assets/FantasyIconsPackFree/Icons/Armor/BattleguardArmor.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d4ad9585d881b9469236aa4e598a8b1
+    m_Address: Assets/FantasyIconsPackFree/Icons/Helmet/ManticoreHelmet.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69b6fac54bf33d94f8b56a037beeb7bf
+    m_Address: Assets/FantasyIconsPackFree/Icons/Helmet/DarkMountain.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 896dada9aa8b8444b8145f80381d5fda
+    m_Address: Assets/FantasyIconsPackFree/Icons/Helmet/KnightHelmet.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f66c057114b8725409847a8a8e83a75b
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/MagicGoldenRing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5ed13bf0e9efec4b9b32244d08e01d3
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeS.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f45b8581bc87c3546ab707f7b92303e3
+    m_Address: Assets/FantasyIconsPackFree/Icons/Ring/Ring/TypeP.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12bba31e10a26b645908ca35cce3ac2a
+    m_Address: Assets/FantasyIconsPackFree/Icons/Boots/BattleguardArmor.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b53db54545fcd5747b7ba5e450c07baf
+    m_Address: Assets/FantasyIconsPackFree/Icons/Helmet/BattleguardHelm.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e530ad2ce10afb46a7f82b24a969687
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeA.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88dda4e05abaf894a8aa3fb05610d2be
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeB.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3378dfeb5d0f811428aaa30b4cc56311
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeC.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aad5ab0dd49dd0745bab7f1067608144
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeD.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 204039124dfeb6747ae1bf807a28640c
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeD2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff366b5692f8b6247b7ce39e58ce2f6e
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeE.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 294ed675ae8e02441b4aeca08bd3489a
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeF.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25cc93aa3eaf9944eb051ff8b5312476
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeG.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0832113c45a11574c8d7c750760641a8
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeJ.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f31f6e24be8cf664aae5dad36c437340
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeK.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1ad8e9eff4ceb2479651129a83642af
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeL.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c040f2a8c7557b0468bee80fe1054061
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeM.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63a7f8baf614275479a4e9899d54188b
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeN.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16d64d538d192a546a155ef63e5e5881
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeP.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5057a89c4ee50e54d945e1ed93d81e67
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeQ.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed4f5829fedfeea4cbf237651b38ee8e
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeR.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc14681b882131e4da55aab2c5e4722d
+    m_Address: Assets/FantasyIconsPackFree/Decoration/TypeU.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3e87ab63840f554e9db1cc4d41c4a20
+    m_Address: Assets/FantasyIconsPackFree/Stone/1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1182b38bb74f72f47b9bbb073c49b580
+    m_Address: Assets/FantasyIconsPackFree/Stone/2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d2713099bc326341a179089e982d955
+    m_Address: Assets/FantasyIconsPackFree/Stone/3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbd3d8fe2b673ac48b70401b662a8513
+    m_Address: Assets/FantasyIconsPackFree/Stone/4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 881b7e9a25ebeb44e800049ab8dd8f5f
+    m_Address: Assets/FantasyIconsPackFree/Stone/5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b8a1cd30b6dc3341b3db5416cf73b23
+    m_Address: Assets/FantasyIconsPackFree/Stone/6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9553f445d3f68ac4f8551dbeeec9e85c
+    m_Address: Assets/FantasyIconsPackFree/Stone/7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 882744cb2a996524193ab0d31ea282a7
+    m_Address: Assets/FantasyIconsPackFree/Stone/8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e97984d25443bab4a813702c3e3e82a1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d080984ea314acf4daa1a1581fd9ede1, type: 2}
+    - {fileID: 11400000, guid: da2e1183fa06a4644af4bc261b98c45d, type: 2}

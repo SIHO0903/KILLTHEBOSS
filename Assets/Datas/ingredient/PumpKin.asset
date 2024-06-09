@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c56e0ba93fc6bc4aa718fb9b8d8779f, type: 3}
+  m_Name: PumpKin
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300256, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  <IsStackable>k__BackingField: 1
+  <Maxquantity>k__BackingField: 99
+  <Name>k__BackingField: Pumpkin
+  <Type>k__BackingField: 6
+  <Description>k__BackingField: hobak
+  <BuyCost>k__BackingField: 0
+  <SellCost>k__BackingField: 500
+  effects: []
+  ingredient: []

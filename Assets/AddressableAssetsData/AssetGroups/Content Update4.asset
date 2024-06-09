@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Content Update4
+  m_EditorClassIdentifier: 
+  m_GroupName: Content Update4
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c9a21b44037f1e04e96c08f0070c6022
+  m_SerializeEntries:
+  - m_GUID: c48a972d3d024c2408a3331750786a29
+    m_Address: Assets/Sources/Sound/UsePotion.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df729d213c4be44a9b55cd109f5cd4f9
+    m_Address: Assets/Sources/Sound/Upgrade.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9669960e415ea604d81fb0784634df79
+    m_Address: Assets/Sources/Sound/Town.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19f89c6e740e7447f9e12a8310d3e973
+    m_Address: Assets/Sources/Sound/SoundOptionClick.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8d04c6f80a1140db85ede568dab1f51
+    m_Address: Assets/Sources/Sound/SellItem.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ff2a2d7e79f81c40ac447512f879374
+    m_Address: Assets/Sources/Sound/Portal.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c458b6714dab015479d507b21fd2cead
+    m_Address: Assets/Sources/Sound/PlayerGetHit.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c7b6d4002009e842bd2621585546d19
+    m_Address: Assets/Sources/Sound/PlayerDie.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 724131bc8a7f34041bb9f1701f0cb58d
+    m_Address: Assets/Sources/Sound/NotEnoughMoney.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f11db4559b3ffff45b62e9327fc5535d
+    m_Address: Assets/Sources/Sound/MeleeAttack.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28494dcbe04e7fa4f9ad68fbf7fd5b33
+    m_Address: Assets/Sources/Sound/MainAudioMixer.mixer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78419f98379502c4dbfb2774bc94e7c1
+    m_Address: Assets/Sources/Sound/MagicAttack.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e349dc959014a845b9aa317d1c2b7f0
+    m_Address: Assets/Sources/Sound/Jump.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32d4b1811dda14a6cb9e059ee8ad17d2
+    m_Address: Assets/Sources/Sound/InventoryItemClick.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffb159a21c8a04135a5616979c828fab
+    m_Address: Assets/Sources/Sound/GetItem.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b99da9a57308d4ba1bee1cf1d9038376
+    m_Address: Assets/Sources/Sound/Fall.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88b1cbe3caa3fee4b8b103b5edd7aba9
+    m_Address: Assets/Sources/Sound/Dash.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bd6b897eb5ca4b7d88a205c4a51640c
+    m_Address: Assets/Sources/Sound/BuyItem.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21c4a490b24ba2045bc815f7626a40ef
+    m_Address: Assets/Sources/Sound/Boss2RainAttack.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 566d2ea6240b489479a6e9fd608c2621
+    m_Address: Assets/Sources/Sound/Boss1 Volcano.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e97984d25443bab4a813702c3e3e82a1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 70dde173a795cfe41a0cccf9d62667c1, type: 2}
+    - {fileID: 11400000, guid: 487309814e293b043b2ae33c5d955d82, type: 2}

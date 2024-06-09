@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c56e0ba93fc6bc4aa718fb9b8d8779f, type: 3}
+  m_Name: T3-HelmetFinal
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 9d4ad9585d881b9469236aa4e598a8b1, type: 3}
+  <IsStackable>k__BackingField: 0
+  <Maxquantity>k__BackingField: 1
+  <Name>k__BackingField: ManticoreHelmet
+  <Type>k__BackingField: 0
+  <Description>k__BackingField: SuperHelmet
+  <BuyCost>k__BackingField: 0
+  <SellCost>k__BackingField: 4500
+  effects:
+  - {fileID: 11400000, guid: 83607b13c23314e46ac921b63c5b9a66, type: 2}
+  ingredient:
+  - ingredient: {fileID: 11400000, guid: 2ecc448f61359624ba2c9a711e1127c3, type: 2}
+    count: 4
+  - ingredient: {fileID: 11400000, guid: d8e27739fcb2a3a42a94d77bb243792c, type: 2}
+    count: 9000

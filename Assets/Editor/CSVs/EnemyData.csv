@@ -1,0 +1,4 @@
+Name,MaxHealth,CurHealth,MoveSpeed,ProjectileDamage,AOEDamage,ContactDamage
+PunchingBag,50000,50000,0,0,0,0
+GroundBoss,1000,1000,4,40,20,80
+AirBoss,2000,2000,3,50,80,100

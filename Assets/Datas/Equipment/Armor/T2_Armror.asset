@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c56e0ba93fc6bc4aa718fb9b8d8779f, type: 3}
+  m_Name: T2_Armror
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 28b103e16acf21b45afc90eb7afb7e42, type: 3}
+  <IsStackable>k__BackingField: 0
+  <Maxquantity>k__BackingField: 1
+  <Name>k__BackingField: BattleGuardArmor
+  <Type>k__BackingField: 1
+  <Description>k__BackingField: Iron Armor
+  <BuyCost>k__BackingField: 0
+  <SellCost>k__BackingField: 5000
+  effects:
+  - {fileID: 11400000, guid: b8e51f798351e414fb7eb908a6e1101e, type: 2}
+  ingredient:
+  - ingredient: {fileID: 11400000, guid: 002854c0161924049ad56842064344cc, type: 2}
+    count: 5
+  - ingredient: {fileID: 11400000, guid: d8e27739fcb2a3a42a94d77bb243792c, type: 2}
+    count: 10000

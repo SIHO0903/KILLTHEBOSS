@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6537f99c85d50c49af260cad50aac4b, type: 3}
+  m_Name: T2-MountainSword
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 62a99ebf2f5cfe04da1d208b9e7817a9, type: 3}
+  <IsStackable>k__BackingField: 0
+  <Maxquantity>k__BackingField: 1
+  <Name>k__BackingField: MountainSword
+  <Type>k__BackingField: 7
+  <Description>k__BackingField: Cut Mountain
+  <BuyCost>k__BackingField: 0
+  <SellCost>k__BackingField: 5000
+  effects: []
+  ingredient:
+  - ingredient: {fileID: 11400000, guid: 002854c0161924049ad56842064344cc, type: 2}
+    count: 6
+  - ingredient: {fileID: 11400000, guid: d8e27739fcb2a3a42a94d77bb243792c, type: 2}
+    count: 10000
+  weaponType: 0
+  damage: 50
+  attackRate: 4
+  criticalChance: 40
+  currentDamageTxtColor: {r: 0, g: 0, b: 0, a: 0}
+  damageTxtColor: {r: 1, g: 0.42514148, b: 0, a: 1}
+  criticalDamageTxtColor: {r: 0.6037736, g: 0.2557159, b: 0, a: 1}
+  currentFontSize: 0
+  fontSize: 5
+  criticalDamageFontSize: 10
