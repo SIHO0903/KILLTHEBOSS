@@ -333,8 +333,6 @@ public class UIInventory : MonoBehaviour
         {
             usings[i].ItemSelected(false);
         }
-        //index = index < 0 ? -index : index;
-        //index = index % usings.Count;
 
         index = (int)Mathf.Repeat(index, 6);
         usings[index].ItemSelected(true);

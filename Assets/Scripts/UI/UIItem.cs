@@ -44,7 +44,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         this.itemImage.enabled = true;
         quantityTxt.gameObject.SetActive(true);
     }
-
     public void SetData(Sprite itemImage, int quantity)
     {
         SetData(itemImage, quantity, null);
@@ -53,7 +52,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
     {
         SetData(item.itemImage, quantity, item);
     }
-
     public void SellItem()
     {
         GameManager.instance.Money += item.SellCost;
@@ -70,19 +68,16 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         quantityTxt.text = quantity + "";
 
     }
-
     public void InitUsingTxt(int num)
     {
         itemImage.enabled = false;
         UsingTxt.gameObject.SetActive(true);
         UsingTxt.text = num + "";
     }
-
     public void ToggleQuantityTxt(bool val)
     {
         quantityTxt.gameObject.SetActive(val);
     }
-
     public void ItemSelected(bool val)
     {
         if (val)
@@ -95,7 +90,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         }
 
     }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (empty) return;
@@ -111,23 +105,19 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         //if(eventData.button == PointerEventData.InputButton.Right && Input.GetKeyDown(KeyCode.LeftShift))
         //    Debug.Log("쉬프트 우클릭");
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (empty) return;
         BeginDrag?.Invoke(this);
     }
-
     public void OnDrag(PointerEventData eventData)
     {
 
     }
-
     public void OnDrop(PointerEventData eventData)
     {
         Drop?.Invoke(this);
     }
-
     public void OnEndDrag(PointerEventData eventData)
     {
         EndDrag?.Invoke(this);
@@ -136,7 +126,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
     {
         PointerExit?.Invoke(this);
     }
-
     public void OnPointerMove(PointerEventData eventData)
     {
         if (empty) return;

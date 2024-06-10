@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class GroundBoss : EnemyEntity
 {
-
-
     float floor_Distance = 1.95f;
     Vector3 floor_Dir = Vector3.down;
     Vector2 floor_Size = new Vector2(1f, 0.3f);
