@@ -4,7 +4,6 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-
 public enum SoundType
 {
     MagicAttack,
@@ -27,20 +26,15 @@ public enum SoundType
     SoundOptionClick,
 
 }
-
 public enum BGMType
 {
     Town,
 
 }
-
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
     [Tooltip("ContextMenu의 InitializeSoundLists를 실행시켜 리스트이름을 초기화하세요")]
-    //public SounList[] soundList;
-    //public SounList[] bgmList;
-
     public SounList[] soundList;
     public SounList[] bgmList;
     public static SoundManager instance;
@@ -95,14 +89,12 @@ public class SoundManager : MonoBehaviour
             }
         }
     }
-
     public void PlaySound(SoundType sound, float volume = 1)
     {
 
         sfxAudioSource.PlayOneShot(soundList[(int)sound].Sound, volume);
         sfxAudioSource.outputAudioMixerGroup = mixer.FindMatchingGroups("SFX")[0];
     }
-
     public void PlayBGM(BGMType sound,float volume = 1)
     {
         bgmAudioSource.outputAudioMixerGroup = mixer.FindMatchingGroups("BGM")[0];
@@ -111,7 +103,6 @@ public class SoundManager : MonoBehaviour
         bgmAudioSource.volume = volume;
         bgmAudioSource.Play();
     }
-
     public void BGMVolume(float val)
     {
         mixer.SetFloat("mixerBGMVolume", Mathf.Log10(val) * 20f);
@@ -120,7 +111,6 @@ public class SoundManager : MonoBehaviour
     {
         mixer.SetFloat("mixerSFXVolume", Mathf.Log10(val) * 20f);
     }
-
     [ContextMenu("Initialize Sound Lists")]
     private void InitializeSoundLists()
     {
@@ -138,7 +128,6 @@ public class SoundManager : MonoBehaviour
             bgmList[i].name = bgmNames[i];
         }
     }
-
     private void LoadAllSounds()
     {
         foreach (SounList sound in soundList)
@@ -151,7 +140,6 @@ public class SoundManager : MonoBehaviour
             bgm.LoadSound();
         }
     }
-
 }
 
 [System.Serializable]
@@ -161,7 +149,6 @@ public class SounList
     [HideInInspector] public string name;
     [SerializeField] private AssetReferenceT<AudioClip> soundReference;
     private AudioClip sound;
-
     public void LoadSound()
     {
         if (sound == null)
@@ -172,5 +159,4 @@ public class SounList
             };
         }
     }
-
 }

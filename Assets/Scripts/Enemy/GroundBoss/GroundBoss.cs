@@ -34,20 +34,11 @@ public class GroundBoss : EnemyEntity
     }
     private void Update()
     {
-        StateChecker();
+        TimeChecker();
         currentState?.UpdateState(this,player.transform);
 
     }
-
-    public override IEnumerator Spawn()
-    {
-        Debug.Log("스폰");
-        SwitchState(NormalAttackState);
-        yield return null;
-
-    }
-
-    void StateChecker()
+    void TimeChecker()
     {
         GimmickTimer += Time.deltaTime;
         IsGround = MyUtils.WhatFloor(transform.position, floor_Distance, floor_Dir, floor_Size, "Ground");
@@ -55,7 +46,42 @@ public class GroundBoss : EnemyEntity
         if (IsGround)
             sprite.flipX = LookDir > 0 ? true : false;
     }
+    public void SwitchState(BaseBossState<GroundBoss> state)
+    {
+        currentState = state;
+    }
+    public void PatternSwitch()
+    {
+        int pattern;
+        if (IsPhase2())
+            pattern = Random.Range(1,5);
+        else
+            pattern = Random.Range(1,3);
+        switch (pattern)
+        {
+            case 1:
+                SwitchState(ShootAttackState);
+                break;
+            case 2:
+                SwitchState(RushAttackState);
+                break;
+            case 3:
+                SwitchState(BounceAttackState);
+                break;
+            case 4:
+                SwitchState(VolcanoAttackState);
+                break;
+        }
+        currentState.EnterState(this, player.transform);
 
+    }
+
+    public override IEnumerator Spawn()
+    {
+        Debug.Log("스폰");
+        PatternSwitch();
+        yield return null;
+    }
     public override IEnumerator Die()
     {
         currentState = null;
@@ -76,40 +102,6 @@ public class GroundBoss : EnemyEntity
         }
 
     }
-
-    public void SwitchState(BaseBossState<GroundBoss> state)
-    {
-        currentState = state;
-    }
-
-    public void PatternSwitch()
-    {
-        int pattern;
-        if (Phase2Check())
-            pattern = Random.Range(1,6);
-        else
-            pattern = Random.Range(1,3);
-        switch (pattern)
-        {
-            case 1:
-                SwitchState(ShootAttackState);
-                break;
-            case 2:
-                SwitchState(RushAttackState);
-                break;
-            case 3:
-                SwitchState(BounceAttackState);
-                break;
-            case 4:
-            case 5:
-                SwitchState(VolcanoAttackState);
-                break;
-        }
-        currentState.EnterState(this, player.transform);
-
-    }
-
-
     public override void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);

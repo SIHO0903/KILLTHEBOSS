@@ -9,8 +9,9 @@ public class Shop : Interact
     protected List<UIShopItem> items = new List<UIShopItem>();
     [SerializeField] Transform slotTransform;
     public static bool IsShopOn { get; private set; } = false;
-    protected void Awake()
+    public virtual void Awake()
     {
+        Debug.Log("¼¥");
         Init(items, slotTransform,ItemBuy);
         CheckShop += CheckShopOn;
     }

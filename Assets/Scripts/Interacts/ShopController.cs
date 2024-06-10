@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShopController : Shop
 {
-    new void Awake()
+    public override void Awake()
     {
         base.Awake();
     }

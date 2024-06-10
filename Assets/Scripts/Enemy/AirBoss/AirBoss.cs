@@ -26,16 +26,6 @@ public class AirBoss : EnemyEntity
     void Update()
     {
         currentState?.UpdateState(this, player.transform);
-
-        //if (Input.GetKeyDown(KeyCode.O))
-        //{
-        //    currentState = RushAttackState;
-        //    currentState?.EnterState(this, player.transform);
-        //}
-        //if (Input.GetKey(KeyCode.P))
-        //{
-        //    currentState?.UpdateState(this, player.transform);
-        //}
     }
 
     public void Flip(Vector3 dir)
@@ -46,14 +36,13 @@ public class AirBoss : EnemyEntity
     public override IEnumerator Spawn()
     {
         Debug.Log("½ºÆù");
-        SwitchState(ShootAttackState);
-        currentState?.EnterState(this, player.transform);
+        PatternSwitch();
         yield return null;
     }
     public void PatternSwitch()
     {
         int pattern;
-        if (Phase2Check())
+        if (IsPhase2())
             pattern = Random.Range(1, 5);
         else
             pattern = Random.Range(1, 3);

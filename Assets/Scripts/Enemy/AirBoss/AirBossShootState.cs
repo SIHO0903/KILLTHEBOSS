@@ -30,7 +30,7 @@ public class AirBossShootState : BaseBossState<AirBoss>
         else
             rigid.velocity = Vector3.zero;
 
-        int bulletCount = boss.Phase2Check() ? 5 : 3;
+        int bulletCount = boss.IsPhase2() ? 5 : 3;
         shotTimer += Time.deltaTime;
         if (shotTimer > 0.3f && curBulletCount < bulletCount)
         {

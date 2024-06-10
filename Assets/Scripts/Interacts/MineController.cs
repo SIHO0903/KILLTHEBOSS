@@ -65,8 +65,6 @@ public class MineController : Interact
         if (oldTime == null)
             oldTime = DateTime.Now.ToBinary().ToString();
 
-        //var tempOfflineTime = Convert.ToInt64(PlayerPrefs.GetString("OfflineTime"));
-        //var oldTime_New = DateTime.FromBinary(tempOfflineTime);
         var tempOfflineTime = Convert.ToInt64(oldTime);
         var oldTime_New = DateTime.FromBinary(tempOfflineTime);
         var currentTime_New = DateTime.Now;
@@ -74,7 +72,7 @@ public class MineController : Interact
         var rawTime = (float)difference.TotalSeconds;
 
         collectedMoney += rawTime * currentIncreaseSpeed;
-        TimeSpan timer = TimeSpan.FromSeconds(rawTime);
+        //TimeSpan timer = TimeSpan.FromSeconds(rawTime);
         //Debug.Log(timer + "시간동안 자리를 비웟습니다.");
 
     }
@@ -93,16 +91,10 @@ public class MineController : Interact
         else
             upgradeBtn.interactable = false;
 
-        if (collectedMoney >= 1)
+        if (collectedMoney >= 1f)
             collectBtn.interactable = true;
         else
             collectBtn.interactable = true;
-    }
-
-    private void OnDisable()
-    {
-        //PlayerPrefs.SetString("OfflineTime", DateTime.Now.ToBinary().ToString());
-        MineSave();
     }
     void MineSave()
     {

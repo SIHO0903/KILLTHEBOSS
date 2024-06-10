@@ -66,13 +66,6 @@ public class AddressablePoolManager : MonoBehaviour
                 break;
             }
         }
-        //프리팹이 전부 활성화상태일시 생성후 리스트에 추가
-        //if (select == null)
-        //{
-        //    //select = Instantiate(objectDatas[(int)prefabTypes].prefabs[index], startPos, quaternion, transform);
-        //    //objectDatas[(int)prefabTypes].pools[index].Add(select);
-        //    //InstantiateAddressable(objectDatas[(int)prefabTypes].prefabs[index], startPos, quaternion, transform, prefabTypes, index);
-        //}
 
         if (select == null)
         {

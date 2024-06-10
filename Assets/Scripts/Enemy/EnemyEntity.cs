@@ -81,7 +81,7 @@ public abstract class EnemyEntity : MonoBehaviour
     {
         StartCoroutine(CameraShake.ShakeCoroutine(0.1f));
     }
-    public bool Phase2Check()
+    public bool IsPhase2()
     {
         bool phase2;
 

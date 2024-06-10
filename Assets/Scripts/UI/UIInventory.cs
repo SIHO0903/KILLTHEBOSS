@@ -95,7 +95,6 @@ public class UIInventory : MonoBehaviour
             items[i].Drop += Drop;
         }
     }
-
     void OnShiftRigthClick(UIItem uiItem)
     {
         if (Shop.IsShopOn)
@@ -130,9 +129,6 @@ public class UIInventory : MonoBehaviour
         }
 
     }
-
-
-
     UIDescription DescriptionShow(UIItem uiItem)
     {
         ItemSO item = uiItem.item;
@@ -143,7 +139,6 @@ public class UIInventory : MonoBehaviour
     {
         description.Toggle(false);
     }
-
     private void BeginDrag(UIItem uiItem)
     {
         int index = GetList(uiItem).IndexOf(uiItem);
@@ -157,8 +152,6 @@ public class UIInventory : MonoBehaviour
         ItemSwap(tmpList, GetList(uiItem), currentDragIndex, GetList(uiItem).IndexOf(uiItem));
         currentDragIndex = -1;
     }
-
-
     public List<UIItem> GetList(UIItem uiItem)
     {
         if (equips.Contains(uiItem))
@@ -170,7 +163,6 @@ public class UIInventory : MonoBehaviour
         else
             return null;
     }
-
     public UIItem InventoryIngredientCheck(ItemSO selectedItem)
     {
 
@@ -194,12 +186,10 @@ public class UIInventory : MonoBehaviour
         Debug.Log("nullllllll");
         return null;
     }
-
     private void EndDrag(UIItem uiItem)
     {
         dragPanel.Toggle(false);
     }
-
     UIItem HasPotionCheck()
     {
 
@@ -215,13 +205,11 @@ public class UIInventory : MonoBehaviour
 
         return null;
     }
-
     public void PotionConsume()
     {
         UseItemAction?.Invoke(HasPotionCheck());
         
     }
-
     public UIItem AmmoItemCheck()
     {
 
@@ -338,26 +326,7 @@ public class UIInventory : MonoBehaviour
 
 
         }
-
-        //for (int i = 0; i < items.Count; i++)
-        //{
-        //    //if (items[i].item != null)
-        //    if (items[i].item.ID == item.ID)
-        //    {
-        //        items[i].Updatequantity(1);
-        //        return;
-        //    }
-
-        //    if (!items[i].empty)
-        //    {
-        //        continue;
-        //    }
-
-        //    items[i].SetData(item.itemImage, 1, item);
-        //    return;
-        //}
     }
-
     public ItemSO ItemSelected(int index)
     {
         for (int i = 0; i < usings.Count; i++)

@@ -11,7 +11,7 @@ public class GroundBossShootAttackState : BaseBossState<GroundBoss>
 
     public override void EnterState(GroundBoss boss,Transform player)
     {
-        int bulletCount = boss.Phase2Check() ? 5 : 3;
+        int bulletCount = boss.IsPhase2() ? 5 : 3;
         int bulletYOffset = PlayerYPos(boss.transform, player, bulletCount);
         float bulletXOffset = boss.LookDir;
         for (int i = 0; i < bulletCount; i++)

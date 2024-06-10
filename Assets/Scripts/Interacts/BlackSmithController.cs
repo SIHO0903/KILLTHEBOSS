@@ -27,7 +27,7 @@ public class BlackSmithController : Shop
     ScrollRect scrollRect;
 
     List<UIShopItem> crafts = new List<UIShopItem>();
-    new void Awake()
+    public override void Awake()
     {
         base.Awake();
         scrollRect = shopUI.GetComponent<ScrollRect>();
@@ -55,7 +55,6 @@ public class BlackSmithController : Shop
         });
 
     }
-
     public void CraftTable(UIShopItem shopItem)
     {
 
@@ -64,7 +63,6 @@ public class BlackSmithController : Shop
         ShowInfo(crafts[index].itemSO); //클릭된 아이템의 정보를 가져옴
 
     }
-
     public void ShowInfo(ItemSO currentItem)
     {
 
@@ -95,7 +93,17 @@ public class BlackSmithController : Shop
         else
             itemCraftBtn.interactable = false;
     }
+    public void Craft()
+    {
+        UIItem currentInventoryItem = InventoryIngredientCheck(getItem); // 해당무기의 재료로쓰는 인벤토리의 아이템을 받아옴
 
+        currentInventoryItem.Quantity -= getItem.ingredient[0].count;
+        GameManager.instance.Money -= getItem.ingredient[1].count;
+
+        currentInventoryItem.Updatequantity(-getItem.ingredient[0].count);
+        inventory.GetItem(getItem);
+        ShowInfo(getItem);
+    }
     Color IsIngredientEnough(int currentQuantity, int neededQuantity)
     {
         if (currentQuantity < neededQuantity)
@@ -103,23 +111,9 @@ public class BlackSmithController : Shop
         else
             return Color.green;
     }
-
     public UIItem InventoryIngredientCheck(ItemSO item)
     {
-
         return inventory?.CraftIngredientCheck(item);
-
     }
 
-    public void Craft()
-    {
-        UIItem currentInventoryItem = InventoryIngredientCheck(this.getItem); // 해당무기의 재료로쓰는 인벤토리의 아이템을 받아옴
-
-        currentInventoryItem.Quantity -= getItem.ingredient[0].count;
-        GameManager.instance.Money -= getItem.ingredient[1].count;
-
-        currentInventoryItem.Updatequantity(-getItem.ingredient[0].count);
-        inventory.GetItem(this.getItem);
-        ShowInfo(this.getItem);
-    }
 }
