@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class AirBoss : EnemyEntity
 {
+    //스테이트패턴
     BaseBossState<AirBoss> currentState;
     public AirBossShootState ShootAttackState = new AirBossShootState();
     public AirBossRushAttackState RushAttackState = new AirBossRushAttackState();
     public AirBossAOEAttackState AOEAttackState = new AirBossAOEAttackState();
-    public AirBossRainAttackState RainAttackState = new AirBossRainAttackState();
-    AirBossDropItem airBossDropItem;
-    GameObject townPortal;
+    public AirBossRainAttackState RainAttackState = new AirBossRainAttackState();  
+    AirBossDropItem airBossDropItem;//드랍아이템클래스
+    GameObject townPortal; //클리어후 포탈 
     public override void Awake()
     {
         base.Awake();
@@ -17,17 +18,11 @@ public class AirBoss : EnemyEntity
         airBossDropItem = new AirBossDropItem();
 
     }
-    public override void Start()
-    {
-        base.Start();
-        enemyStat.curHealth = enemyStat.maxHealth;
-    }
-
+    //패턴업데이트
     void Update()
     {
         currentState?.UpdateState(this, player.transform);
     }
-
     public void Flip(Vector3 dir)
     {
         LookDir = dir.x > 0 ? 1 : -1;
@@ -64,11 +59,11 @@ public class AirBoss : EnemyEntity
         currentState?.EnterState(this, player.transform);
 
     }
-
     public void SwitchState(BaseBossState<AirBoss> state)
     {
         currentState = state;
     }
+    //보스사망시 아이템드랍 및 포탈활성화
     public override IEnumerator Die()
     {
         currentState = null;

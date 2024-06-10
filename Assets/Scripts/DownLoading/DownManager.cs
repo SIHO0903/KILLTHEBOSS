@@ -18,8 +18,6 @@ public class DownManager : MonoBehaviour
 
     [Header("Label")]
     [SerializeField] List<AssetLabelReference> labels = new List<AssetLabelReference>();
-    //public AssetLabelReference[] addressableLabels;
-
 
     private long patchSize;  //총 패치크기
     private Dictionary<string,long> patchMap = new Dictionary<string,long>(); //라벨별 패치크기 저장
@@ -45,10 +43,6 @@ public class DownManager : MonoBehaviour
     //패치할 크기 체크
     IEnumerator CheckUpdateFiles()
     {
-        //List<string> labels = new List<string>();
-
-
-
         patchSize = default;
 
         foreach (var label in labels) //총 패치할 크기
@@ -79,6 +73,7 @@ public class DownManager : MonoBehaviour
         }
     }
 
+    //패치사이즈변환
     private string GetFileSize(long byteCnt)
     {
         string size = "0 Bytes";
@@ -111,7 +106,6 @@ public class DownManager : MonoBehaviour
     }
     IEnumerator PatchFiles()
     {
-        //var labels = new List<string>();
 
         foreach (var label in labels) //총 패치할 크기
         {
@@ -128,6 +122,7 @@ public class DownManager : MonoBehaviour
         yield return CheckDownLoad();
     }
 
+    //파일 다운로드
     IEnumerator DownLoadLabel(string label)
     {
         patchMap.Add(label, 0);
@@ -144,6 +139,7 @@ public class DownManager : MonoBehaviour
         Addressables.Release(handle);
     }
 
+    //다운로드 슬라이드바
     IEnumerator CheckDownLoad()
     {
         var total = 0f;

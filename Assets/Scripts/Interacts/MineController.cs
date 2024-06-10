@@ -34,20 +34,19 @@ public class MineController : Interact
 
     private void Awake()
     {
+        //버튼에 리스너추가
         upgradeBtn.onClick.AddListener(() =>
         {
             currentIncreaseSpeed = nextIncreaseSpeed;
             nextIncreaseSpeed += 0.1f;
-            GameManager.instance.Money -= (int)nextUpgradeCost;
+            GameManager.instance.Money -= Mathf.FloorToInt(nextUpgradeCost);
             nextUpgradeCost += 10;
-            MineSave();
 
         });
         collectBtn.onClick.AddListener(() =>
         {
-            GameManager.instance.Money += (int)collectedMoney;
+            GameManager.instance.Money += Mathf.FloorToInt(collectedMoney);
             collectedMoney = 0;
-            MineSave();
         });
     }
     private void OnEnable()
@@ -55,18 +54,19 @@ public class MineController : Interact
         OfflineData data = JsonSaveLoader.Mine_Load();
         if(data != null)
         {
-            Debug.Log("데이터가잇음");
             collectedMoney = data.collectedMoney;
             currentIncreaseSpeed = data.currentIncreaseSpeed;
             nextIncreaseSpeed = data.nextIncreaseSpeed;
             nextUpgradeCost = data.nextUpgradeCost;
             oldTime = data.oldTime;
         }
-        if (oldTime == null)
+        else
             oldTime = DateTime.Now.ToBinary().ToString();
 
+        
         var tempOfflineTime = Convert.ToInt64(oldTime);
         var oldTime_New = DateTime.FromBinary(tempOfflineTime);
+
         var currentTime_New = DateTime.Now;
         var difference = currentTime_New.Subtract(oldTime_New);
         var rawTime = (float)difference.TotalSeconds;
@@ -78,7 +78,6 @@ public class MineController : Interact
     }
     private void Update()
     {
-
         collectedMoney += Time.deltaTime * currentIncreaseSpeed;
 
         upgradeCostTxt.text = nextUpgradeCost+"";
@@ -96,7 +95,7 @@ public class MineController : Interact
         else
             collectBtn.interactable = true;
     }
-    void MineSave()
+    private void OnDisable()
     {
         JsonSaveLoader.Mine_Save(collectedMoney, currentIncreaseSpeed, nextIncreaseSpeed, nextUpgradeCost, DateTime.Now.ToBinary().ToString());
     }

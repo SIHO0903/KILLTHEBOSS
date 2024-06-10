@@ -1,14 +1,18 @@
 using UnityEditor;
 using System.IO;
 using UnityEngine;
+using Model;
+
 
 public class CSVtoSO
 {
+    //Editor폴더에 있는 .csv파일위치
     static string enemyCSVPath = "/Editor/CSVs/EnemyData.csv";
 
-    [UnityEditor.MenuItem("MyUtilties/Generate Enemies")]
+    [MenuItem("MyUtilties/Generate Enemies")]
     public static void GenerateEnemies()
     {
+        //파일읽은후 EnemyStatsSO에 데이터대입후 스크립터블오브젝트생성 및 저장
         string[] data = File.ReadAllLines(Application.dataPath + enemyCSVPath);
         Debug.Log("data.Length : " + data.Length);
         for (int i = 1; i < data.Length; i++)

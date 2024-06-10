@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -29,6 +28,7 @@ public class BlackSmithController : Shop
     List<UIShopItem> crafts = new List<UIShopItem>();
     public override void Awake()
     {
+        //버튼에 리스너추가
         base.Awake();
         scrollRect = shopUI.GetComponent<ScrollRect>();
         Init(crafts, weaponCraft,CraftTable);
@@ -63,7 +63,9 @@ public class BlackSmithController : Shop
         ShowInfo(crafts[index].itemSO); //클릭된 아이템의 정보를 가져옴
 
     }
-    public void ShowInfo(ItemSO currentItem)
+
+    //크래프트UI에 제작에 필요한 재료 업데이트
+    void ShowInfo(ItemSO currentItem)
     {
 
         UIItem currentInventoryItem = InventoryIngredientCheck(currentItem); // 해당무기의 재료로쓰는 인벤토리의 아이템을 받아옴
@@ -93,14 +95,15 @@ public class BlackSmithController : Shop
         else
             itemCraftBtn.interactable = false;
     }
-    public void Craft()
+
+    //제작버튼 클릭시 재료및 재화소모
+    void Craft()
     {
         UIItem currentInventoryItem = InventoryIngredientCheck(getItem); // 해당무기의 재료로쓰는 인벤토리의 아이템을 받아옴
 
-        currentInventoryItem.Quantity -= getItem.ingredient[0].count;
+        currentInventoryItem.Updatequantity(-getItem.ingredient[0].count);
         GameManager.instance.Money -= getItem.ingredient[1].count;
 
-        currentInventoryItem.Updatequantity(-getItem.ingredient[0].count);
         inventory.GetItem(getItem);
         ShowInfo(getItem);
     }

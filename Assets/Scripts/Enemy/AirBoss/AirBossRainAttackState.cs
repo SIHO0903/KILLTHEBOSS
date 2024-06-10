@@ -17,33 +17,32 @@ public class AirBossRainAttackState : BaseBossState<AirBoss>
         shotCount = 0;
         ShootTimer = 0;
     }
-
     public override void UpdateState(AirBoss boss, Transform player)
     {
-
+        //시작시 위치조정
         if (Vector3.Distance(boss.transform.position, ShootPos) > 0.5f)
         {
             rigid.velocity = Vector3.zero;
             boss.transform.position = Vector3.MoveTowards(boss.transform.position, ShootPos, setSpeed);
-            Debug.Log("움직임 조정중");
         }
         else
-        {
+        {           
             ShootTimer += Time.deltaTime;
             if (ShootTimer > 1.5f)
             {
                 ShootTimer = 0f;
                 shotCount++;
-                if (shotCount >= 3)
+                if (shotCount > 3)
                 {
                     boss.PatternSwitch();
                     return;
                 }
-                SoundManager.instance.PlaySound(SoundType.PlayerGetHit);
-                //xPos = -17 ~ 17, yPos = 11
+                SoundManager.instance.PlaySound(SoundType.Boss2_RainAttack);
+                //깃털 회피지역 랜덤난수발생
                 randomNoFeather = Random.Range(0, 30);
                 for (int j = 0; j < 30; j++)
                 {
+                    //깃털위치 변환후 발사
                     Vector3 projectilePos;
                     if(j > randomNoFeather)
                         projectilePos = new Vector3(projectileStartPos.x + j+4, projectileStartPos.y, projectileStartPos.z);
@@ -54,7 +53,6 @@ public class AirBossRainAttackState : BaseBossState<AirBoss>
                     Rigidbody2D rigid = feather.GetComponent<Rigidbody2D>();
                     rigid.gravityScale = 1.3f;
                     rigid.velocity = feather.GetComponent<EnemyProjectile>().projectileLookAt(projectilePos + Vector3.down)  * featherSpeed;
-
                 }
 
             }

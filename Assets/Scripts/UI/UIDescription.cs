@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Model;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -12,17 +11,17 @@ public class UIDescription : MonoBehaviour
     {
         Toggle(false);
     }
-
     public void Toggle(bool val)
     {
         gameObject.SetActive(val);
     }
-
     public void SetData(StringBuilder stringBuilder)
     {
         titleTxt.text = stringBuilder.ToString();
         gameObject.SetActive(true);
     }
+
+    //아이템 설명 메소드
     public StringBuilder Desc(ItemSO item)
     {
         StringBuilder desc = new StringBuilder();

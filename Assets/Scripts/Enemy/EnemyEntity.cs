@@ -1,3 +1,4 @@
+using Model;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -24,12 +25,14 @@ public abstract class EnemyEntity : MonoBehaviour
         healthUI = GetComponentInChildren<BossHealthUI>();
         glowMat = GetComponent<SpriteRenderer>().material;
         colorBlinkTime = new WaitForSeconds(0.1f);
-    }
+    }  
     public virtual void Start()
     {
+        enemyStat.curHealth = enemyStat.maxHealth;
         healthUI.HealthUI(enemyStat.curHealth, enemyStat.maxHealth);
         StartCoroutine(healthUI.BossText(enemyStat.name, Spawn()));
     }
+    //피격시 행동
     public virtual void OnDamaged(float damage, Color color,float fontSize)
     {
         enemyStat.curHealth -= damage;
@@ -37,30 +40,27 @@ public abstract class EnemyEntity : MonoBehaviour
         healthUI.HealthUI(enemyStat.curHealth, enemyStat.maxHealth);
         hitTimerCount = 0;
         BossSpriteChange();
-
         if (enemyStat.curHealth <= 0)
         {
             enemyStat.curHealth = 0;
-            Debug.Log("보스사망");
             StartCoroutine(Die());
         }
         else
-        {
-            if (!isOnHit) StartCoroutine(DamagedEffect());
-        }
+            if (!isOnHit) StartCoroutine(DamagedEffect()); //코루틴 중복실행방지
     }
 
+    //페이즈2 보스컬러변환
     void BossSpriteChange()
     {
         if (enemyStat.curHealth < enemyStat.maxHealth / 2)
         {
-            Debug.Log("페이즈2 컬러변환");
             Color phase2Color = new Color(1, 0.5f, 0.5f, 1);
             sprite.color = phase2Color;
         }
 
     }
 
+    //글로우쉐이더를 활용한 피격이펙트
     IEnumerator DamagedEffect()
     {
         isOnHit = true;
@@ -76,7 +76,6 @@ public abstract class EnemyEntity : MonoBehaviour
         }
         isOnHit = false;
     }
-
     public void CameraShaking()
     {
         StartCoroutine(CameraShake.ShakeCoroutine(0.1f));
@@ -93,9 +92,8 @@ public abstract class EnemyEntity : MonoBehaviour
         return phase2;
     }
     public abstract IEnumerator Spawn();
-
     public abstract IEnumerator Die();
-
+    //무기별 피격시 플로우
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Melee"))

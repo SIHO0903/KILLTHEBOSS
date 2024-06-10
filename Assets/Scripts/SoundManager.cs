@@ -4,6 +4,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
+//사운드이름 enum타입으로 선언
 public enum SoundType
 {
     MagicAttack,
@@ -37,13 +38,16 @@ public class SoundManager : MonoBehaviour
     [Tooltip("ContextMenu의 InitializeSoundLists를 실행시켜 리스트이름을 초기화하세요")]
     public SounList[] soundList;
     public SounList[] bgmList;
+    //싱글턴
     public static SoundManager instance;
+
     private AudioSource sfxAudioSource;
     [SerializeField] AudioSource bgmAudioSource;
     [SerializeField] AudioMixer mixer;
     UISound uiSound;
     private void Awake()
     {
+        //싱글턴화
         DontDestroyOnLoad(gameObject);
         if(instance == null)
         {
@@ -68,25 +72,23 @@ public class SoundManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(uiSound.gameObject.activeSelf)
+            if (uiSound.gameObject.activeSelf)
                 uiSound.gameObject.SetActive(false);
             else
                 uiSound.gameObject.SetActive(true);
         }
 
     }
+
+    //씬로드시 씬에 맞는 BGM재생
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         for (int i = 0; i < bgmList.Length; i++)
         {
-            if (arg0.name == bgmList[i].name)
-            {         
+            if (arg0.name == bgmList[i].name)        
                 PlayBGM(BGMType.Town);
-            }
             else
-            {
                 bgmAudioSource.Stop();
-            }
         }
     }
     public void PlaySound(SoundType sound, float volume = 1)
@@ -111,6 +113,8 @@ public class SoundManager : MonoBehaviour
     {
         mixer.SetFloat("mixerSFXVolume", Mathf.Log10(val) * 20f);
     }
+
+    //enum으로 저장한타입을 두개의 배열 초기화
     [ContextMenu("Initialize Sound Lists")]
     private void InitializeSoundLists()
     {
@@ -149,6 +153,8 @@ public class SounList
     [HideInInspector] public string name;
     [SerializeField] private AssetReferenceT<AudioClip> soundReference;
     private AudioClip sound;
+
+    //아마존s3에 저장되잇는 사운드로드
     public void LoadSound()
     {
         if (sound == null)

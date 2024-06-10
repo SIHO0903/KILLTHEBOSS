@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+//아이템 칸 오브젝트에 붙어있는 스크립트
 public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler, IPointerExitHandler, IPointerMoveHandler
 {
     [SerializeField] Image itemImage;
@@ -24,7 +22,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
     {
         ResetData();
     }
-
+    //아이템칸의 데이터초기화
     public void ResetData()
     {
         itemImage.enabled = false;
@@ -32,8 +30,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         item = null;
         empty = true;
     }
-
-    public void SetData(Sprite itemImage, int quantity, ItemSO item)
+    public void SetData(Sprite itemImage, int quantity, ItemSO item=null)
     {
 
         this.itemImage.sprite = itemImage;
@@ -44,10 +41,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         this.itemImage.enabled = true;
         quantityTxt.gameObject.SetActive(true);
     }
-    public void SetData(Sprite itemImage, int quantity)
-    {
-        SetData(itemImage, quantity, null);
-    }
     public void SetData(ItemSO item,int quantity)
     {
         SetData(item.itemImage, quantity, item);
@@ -57,6 +50,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         GameManager.instance.Money += item.SellCost;
         Updatequantity(-1);
     }
+    //아이템 획득또는 구매시 수량 업데이트
     public void Updatequantity(int quantity)
     {
         quantity = int.Parse(quantityTxt.text) + quantity;
@@ -89,7 +83,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
             borderImage.color = new Color(1, 1, 1, 0.2f);
         }
 
-    }
+    } 
     public void OnPointerClick(PointerEventData eventData)
     {
         if (empty) return;
@@ -100,10 +94,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
                 PointerShiftRightClick?.Invoke(this);
             else
                 PointerRightClick?.Invoke(this);
-
         }
-        //if(eventData.button == PointerEventData.InputButton.Right && Input.GetKeyDown(KeyCode.LeftShift))
-        //    Debug.Log("쉬프트 우클릭");
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -133,4 +124,5 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IE
         if (description != null)
             description.transform.position = eventData.position;
     }
+
 }

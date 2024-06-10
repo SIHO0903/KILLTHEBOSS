@@ -45,18 +45,17 @@ public class UIInventory : MonoBehaviour
         LoadData();
         CurrentEquipEffectsCheck?.Invoke();
     }
+  
     public void SaveData()
     {
         JsonSaveLoader.Inventory_Save(equips, items, usings);
-
-    }
+    }  
     void LoadData()
     {
         InventoryData loadData = JsonSaveLoader.Inventory_Load();
         StatueController.Statue_StatsLoad();
         if(loadData == null)
         {
-
             return;
         }
         else
@@ -79,6 +78,8 @@ public class UIInventory : MonoBehaviour
         }
 
     }
+
+    //각각의 아이템칸에 이벤트 핸들러 연결
     void Init(List<UIItem> items, RectTransform box)
     {
         items.Capacity = box.childCount;
@@ -147,6 +148,10 @@ public class UIInventory : MonoBehaviour
         dragPanel.SetData(uiItem.item.itemImage, uiItem.Quantity);
         dragPanel.Toggle(true);
     }
+    private void EndDrag(UIItem uiItem)
+    {
+        dragPanel.Toggle(false);
+    }
     private void Drop(UIItem uiItem)
     {
         ItemSwap(tmpList, GetList(uiItem), currentDragIndex, GetList(uiItem).IndexOf(uiItem));
@@ -163,6 +168,8 @@ public class UIInventory : MonoBehaviour
         else
             return null;
     }
+
+    //이벤토리에서 특정아이템 유무확인
     public UIItem InventoryIngredientCheck(ItemSO selectedItem)
     {
 
@@ -183,26 +190,21 @@ public class UIInventory : MonoBehaviour
             else if (item.item.ID == ingredientID)
                 return item;
         }
-        Debug.Log("nullllllll");
+
         return null;
     }
-    private void EndDrag(UIItem uiItem)
-    {
-        dragPanel.Toggle(false);
-    }
+
+
+    //회복아이템 유무확인
     UIItem HasPotionCheck()
     {
-
         for (int i = 0; i < items.Count; i++)
         {
             if (items[i].item != null && items[i].item.Type == ItemSO.TypeEnum.Consumable)
             {
-                Debug.Log("포션찾음 저장 : " + items[i].item.name);
                 return items[i];
             }
         }
-
-
         return null;
     }
     public void PotionConsume()
@@ -210,6 +212,8 @@ public class UIInventory : MonoBehaviour
         UseItemAction?.Invoke(HasPotionCheck());
         
     }
+
+    //소모성 발사체가 인벤토리에 있는지 체크
     public UIItem AmmoItemCheck()
     {
 
@@ -224,8 +228,6 @@ public class UIInventory : MonoBehaviour
                         currentAmmoItem = items[i];
                     }
                 }
-
-                Debug.Log("포문도는거 체크");
             }
         }
 
@@ -236,6 +238,8 @@ public class UIInventory : MonoBehaviour
     {
         ammoItem.Updatequantity(-1);
     }
+
+    //깊은복사를 이용해 아이템 위치 스왑
     public void ItemSwap(List<UIItem> item1, List<UIItem> item2, int index1, int index2)
     {
         while (item1[index1].item.Type == ItemSO.TypeEnum.Accessories && !item2[index2].empty)
@@ -247,30 +251,37 @@ public class UIInventory : MonoBehaviour
                 break;
             }
         }
-
         if (!item2[index2].empty)
         {
-
             ItemSO tmpItem = item2[index2].item;
             int tmpQuantity = item2[index2].Quantity;
 
             item2[index2].SetData(item1[index1].item.itemImage, item1[index1].Quantity, item1[index1].item);
             item1[index1].SetData(tmpItem.itemImage, tmpQuantity, tmpItem);
-
         }
         else
         {
             item2[index2].SetData(item1[index1].item.itemImage, item1[index1].Quantity, item1[index1].item);
             item1[index1].ResetData();
         }
-
         for (int i = 0; i < equips.Count; i++)
         {
             equips[i].ToggleQuantityTxt(false);
         }
         CurrentEquipEffectsCheck?.Invoke();
     }
+    public ItemSO ItemSelected(int index)
+    {
+        for (int i = 0; i < usings.Count; i++)
+        {
+            usings[i].ItemSelected(false);
+        }
 
+        index = (int)Mathf.Repeat(index, 6);
+        usings[index].ItemSelected(true);
+
+        return usings[index].item;
+    }
     public void Toggle(bool val)
     {
         gameObject.GetComponent<VerticalLayoutGroup>().padding.top = val == true ? -150 : 0;
@@ -278,7 +289,6 @@ public class UIInventory : MonoBehaviour
         itemBox.parent.gameObject.SetActive(val);
         currentAmmoItem = null;
     }
-
     public void GetItem(ItemSO item,int quantity=1)
     {
         SoundManager.instance.PlaySound(SoundType.GetItem);
@@ -326,17 +336,5 @@ public class UIInventory : MonoBehaviour
 
 
         }
-    }
-    public ItemSO ItemSelected(int index)
-    {
-        for (int i = 0; i < usings.Count; i++)
-        {
-            usings[i].ItemSelected(false);
-        }
-
-        index = (int)Mathf.Repeat(index, 6);
-        usings[index].ItemSelected(true);
-
-        return usings[index].item;
     }
 }

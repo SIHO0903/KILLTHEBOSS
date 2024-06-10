@@ -24,12 +24,7 @@ public class GroundBoss : EnemyEntity
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         groundBossDropItem = new GroundBossDropItem();
     }
-    public override void Start()
-    {
-        base.Start();
 
-        enemyStat.curHealth = enemyStat.maxHealth;
-    }
     private void Update()
     {
         TimeChecker();
